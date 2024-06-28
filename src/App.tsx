@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function App() {
 
@@ -9,6 +10,7 @@ export default function App() {
 
   return (
       <main>
+        <motion.div></motion.div>
         <h1>Cinemax</h1>
         <h3>
           Trouvez les infos de films et de séries en 2 clics !
