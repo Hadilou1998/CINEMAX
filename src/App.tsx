@@ -76,17 +76,16 @@ export default function App() {
             "Poster": "https://m.media-amazon.com/images/M/MV5BNzQzNzc2MDQ3OF5BMl5BanBnXkFtZTgwNTU2NzU2MTI@._V1_SX300.jpg"
         }
     ]);
-
   const [query, setQuery] = useState("")
   const [error, setError] = useState("")
 
   const searchMovie = async (e) => {
     e.preventDefault() // On limite le formulaire à la soumission
-    if (query.trim().length > 2) {
-      setError("Merci de tapez un mot-clé de 3 caractères minimum")
-    } // Si le champ est vide ou trop court on affiche une erreur
+    // if (query.trim() === "") {
+    //   setError("Merci de tapez un mot-clé de 3 caractères minimum")
+    // } // Si le champ est vide ou trop court on affiche une erreur
 
-    const url = `http://www.omdbapi.com/?apikey=3a097856&s=${query}`
+    const url = `http://www.omdbapi.com/?i=tt3896198&apikey=120b5a1e=${query}`
     try {
       const res = await fetch(url) // On fetch l'API OMDB
       const data = await res.json() // On récupère les données et les converti
@@ -96,7 +95,7 @@ export default function App() {
         setListMovies(data.Search) // On l'ajoute au tableau
       }
     } catch (err) {
-      setError("Une erreur est survenue lors votre recherche")
+      setError("Une erreur est survenue lors de votre recherche")
     }
   }
 
@@ -109,9 +108,7 @@ export default function App() {
         >
           <h1>Cinemax</h1>
         </motion.div>
-        <motion.div
-        
-        >
+        <motion.div>
         <h3 className="text-center">Trouvez les infos de films et de séries en 2 clics !</h3>
         </motion.div>
         <motion.div
@@ -130,12 +127,11 @@ export default function App() {
               </svg>
             </button>
           </form>
-          <p className="text-center text-red-500">{error ? error : ""}</p>
+          {/* <p className="text-center text-red-500">{error ? error : ""}</p> */}
         </motion.div>
-
-        <Card movies={listMovies} />
+        {
+          listMovies.length > 0 ? <Card movies={listMovies} /> : "Aucun résultat"
+        }
       </main>
-
   )
 }
-
