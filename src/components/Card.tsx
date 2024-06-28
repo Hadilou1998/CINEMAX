@@ -17,9 +17,12 @@ export default function Card({ movies }: Movies) {
                 movies.map((card) => (
                     <div 
                     key={ card.imdbID } 
-                    className="">
+                    className="p-3 border rounded-lg">
                         <div className="">
-                            <img src={ card.Poster } className="" alt={ card.Title } />
+                            <img 
+                            src={ card.Poster } 
+                            className="rounded-lg" 
+                            alt={ card.Title } />
                     <h5 className="">{ card.Title }</h5>
                     <p className="">{ card.Year }</p>
                         </div>
