@@ -16,11 +16,14 @@ export default function Card({ movies }: Movies) {
             <div 
             key={ card.imdbID } // La clé qui rend unique l'élément 
             className="p-3 transition-shadow duration-200 ease-in-out border rounded-lg shadow-md bg-slate-50 hover:shadow-lg">
-                <div className="">
+                <div className="text-center">
                     <img 
-                        src={ card.Poster } 
+                        src={ 
+                            card.Poster ? card.Poster : `https://placehold.co/330x430/gray/white?text=${card.Title}`
+                         } 
                         className="rounded-lg" 
-                        alt={ card.Title } />
+                        alt={ card.Title } 
+                        width={330}/>
                         <div className="flex flex-col justify-between p-2">
                             <h5 className="text-xl font-light leading-relaxed">{ card.Title }</h5>
                             <p className="text-center">{ card.Year }</p>
