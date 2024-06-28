@@ -12,7 +12,7 @@ interface Movies {
 export default function Card({ movies }: Movies) {
     
     return (
-        <>
+        <section className="grid-cols-1 gap-4 md:grid-cols-4">
             {
                 movies.map((card) => (
                     <div 
@@ -26,6 +26,6 @@ export default function Card({ movies }: Movies) {
                     </div>
                 ))
             }
-        </>        
+        </section>        
     );
 }
