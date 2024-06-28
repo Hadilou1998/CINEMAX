@@ -80,7 +80,7 @@ export default function App() {
   const [error, setError] = useState("")
 
   const searchMovie = async (e) => {
-    e.preventDefault() // On limite le formulaire à la soumission
+    e.preventDefault(); // On limite le formulaire à la soumission
     // if (query.trim() === "") {
     //   setError("Merci de tapez un mot-clé de 3 caractères minimum")
     // } // Si le champ est vide ou trop court on affiche une erreur
@@ -95,7 +95,7 @@ export default function App() {
         setListMovies(data.Search) // On l'ajoute au tableau
       }
     } catch (err) {
-      setError("Une erreur est survenue lors de votre recherche")
+      setError("Une erreur est survenue lors votre recherche")
     }
   }
 
