@@ -554,15 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
-.border {
-  border-width: 1px;
-}
-
 h1 {
   text-align: center;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 600;
+  font-size: 3.75rem;
+  line-height: 1;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #262626 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(38 38 38 / 0) var(--tw-gradient-to-position);
@@ -573,12 +568,17 @@ h1 {
   color: transparent;
 }
 
+h3 {
+  font-weight: 300;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Kanit', sans-serif;
 }
 
 form {
@@ -597,16 +597,23 @@ input {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
   text-align: center;
+  font-weight: 300;
 }
 
 button {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #b91c1c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(185 28 28 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #f59e0b var(--tw-gradient-to-position);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-weight: 300;
   --tw-text-opacity: 1;
-  color: rgb(38 38 38 / var(--tw-text-opacity));
+  color: rgb(248 250 252 / var(--tw-text-opacity));
 }
