@@ -1,4 +1,15 @@
-export default function Card({ movies }) {
+interface Card {
+    Title: string;
+    Year: string;
+    imdbID: string;
+    Poster: string;
+}
+
+interface Movies {
+    movies: Card[];
+}
+
+export default function Card({ movies }: Movies) {
     
     return (
         <>
